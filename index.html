@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Liz Leone — Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+/* ========== RESET ========== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ========== COLOR SYSTEM ========== */
+:root {
+  --bg-main: #ffe2f0;
+  --bg-soft: #ffffff;
+  --accent: #72002f;
+  --accent-light: #ffa2a2;
+  --text-main: #6a3a4a;     /* SOFT MAUVE — NOT BLACK */
+  --text-soft: #181818;
+}
+
+/* ========== BODY ========== */
+body {
+  background: linear-gradient(180deg, var(--bg-main), #ffffff);
+  color: var(--text-main);
+  overflow-x: hidden;
+}
+
+/* ========== SOCIALS ========== */
+.top-bar {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+
+.social-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--bg-soft);
+  color:blueviolet;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 6px 16px rgba(240,143,163,.35);
+  transition: .25s;
+}
+
+.social-icon:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(240,143,163,.5);
+}
+
+/* ========== HERO ========== */
+header {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 30px;
+  text-align: center;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Avatar glow */
+.hero-avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  padding: 6px;
+  background: linear-gradient(135deg, #ffffff, #fff0f0);
+  box-shadow: 0 0 35px rgb(255, 255, 255);
+  animation: float 4s ease-in-out infinite;
+}
+
+.hero-avatar img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Text */
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 2.8rem);
+  color: var(--accent);
+}
+
+.hero p {
+  font-size: 1.05rem;
+  color: var(--text-soft);
+}
+
+/* ========== SECTIONS ========== */
+section {
+  padding: 55px 20px;
+}
+
+h2 {
+  text-align: center;
+  font-size: clamp(1.7rem, 4vw, 2.2rem);
+  color: var(--accent);
+  margin-bottom: 32px;
+}
+
+/* ========== CARD ========== */
+.card {
+  background: var(--bg-soft);
+  border-radius: 28px;
+  padding: 30px;
+  max-width: 1000px;
+  margin: auto;
+  box-shadow: 0 18px 40px rgba(240,143,163,.18);
+  animation: fadeUp .8s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* ========== ABOUT ========== */
+.about-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.about-grid img {
+  width: 100%;
+  border-radius: 60px;
+  border-color: #fd8686;
+  stroke-width: 20%;
+}
+
+/* ========== PROJECTS ========== */
+.projects {
+  display: grid;
+  gap: 26px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.project {
+  background: white;
+  border-radius: 26px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.project:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 45px rgba(240,143,163,.35);
+}
+
+.project img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.project div {
+  padding: 22px;
+}
+
+.project h3 {
+  color: var(--accent);
+}
+
+.project p {
+  color: var(--text-soft);
+  font-size: .95rem;
+}
+
+/* ========== SPOTIFY ========== */
+.spotify iframe {
+  width: 100%;
+  height: 420px;
+  border-radius: 22px;
+}
+
+/* ========== HOBBIES ========== */
+.hobbies {
+  display: grid;
+  gap: 22px;
+}
+
+.hobby {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: .25s;
+}
+
+.hobby:hover {
+  box-shadow: 0 0 25px rgba(240,143,163,.35);
+}
+
+.hobby img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.hobby p {
+  padding: 14px;
+  text-align: center;
+  color: var(--text-soft);
+}
+
+/* ========== CONTACT ========== */
+.contact {
+  text-align: center;
+}
+
+.contact button {
+  margin-top: 18px;
+  padding: 14px 30px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, #4749f7, #ff6e8d);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 30px rgba(240,143,163,.5);
+  transition: .25s;
+}
+
+.contact button:hover {
+  transform: scale(1.05);
+}
+
+/* ========== FOOTER ========== */
+footer {
+  text-align: center;
+  padding: 30px;
+  color: var(--text-soft);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (min-width: 700px) {
+  .about-grid { grid-template-columns: 1fr 1.3fr; }
+  .projects { grid-template-columns: repeat(2,1fr); }
+  .hobbies { grid-template-columns: repeat(3,1fr); }
+}
+
+@media (min-width: 1000px) {
+  .projects { grid-template-columns: repeat(3,1fr); }
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- SOCIALS -->
+<div class="top-bar">
+  <a class="social-icon" href="https://www.instagram.com/opensite.co/"><i class="fab fa-instagram"></i></a>
+  <a class="social-icon" href="https://www.youtube.com/@Opensitee"><i class="fab fa-youtube"></i></a>
+  <a class="social-icon" href="https://github.com/liz3509"><i class="fab fa-github"></i></a>
+</div>
+
+<header>
+  <div class="hero">
+    <div class="hero-avatar">
+      <img src="20240505_162429.jpg" alt="Liz">
+    </div>
+    <h1>Hi, I’m Liz Leone 🌷</h1>
+    <p>Web Dev and Designer ● AI app dev ● Hobbysist ● an extraterrestrial :p</p>
+  </div>
+</header>
+
+<section>
+  <h2>About Me 🌱</h2>
+  <div class="card about-grid">
+    <img src="unnamed (2).jpg" alt="About Me">
+    <p>
+      Hey hey Heyyy!!!💫<br><br> I enjoy making portfolios, AI apps, websites, games, and creating useful app ideas :p<br>
+      <br>
+    <br> I'm open to collaborating or scheduling a meeting to talk about potential opportunities, creative projects, or start up ideas!  
+    <br>
+    <br><br>Feel free to reach out! :) and I may be able to help you out for free depending on the scale of the project as I don't focus too much on profit!🚀
+  </p>
+  </div>
+</section>
+<section>
+  <h2>Things I love 💕</h2>
+  <div class="projects">
+    <div class="project">
+      <img src="d51f7ef9e6518630410dab98293faeb3.jpg">
+      <div>
+        <h3> Favorite show~ The Umbrella Academy!</h3>
+        
+      </div>
+    </div>
+    <div class="project">
+      <img src="nature.jpg">
+      <div>
+        <h3>Naturee :p</h3>
+        <p>especially when its cold! :v (others might disagree) </p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="7E16E81C-4A64-4657-9D0E-A6F338E2376E.JPG">
+      <div>
+        <h3>Cracking myself up lol ✨</h3>
+        <p> lots of random photos :p </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>My Projects</h2>
+  <div class="projects">
+    <div class="project">
+      <a href="https://opensite1.netlify.app/"><img src="Screenshot 2025-12-29 233643.png"></a>
+      <div>
+        <h3>OpenSite.co</h3>
+        <br>
+        <p>Rebeling against for profit AI companies<br><br> making AI apps opensourced <br> <br>*No subscriptions or downloads necessary!*</p>
+      </div>
+    </div>
+    <div class="project">
+     <a href="https://liz3509.github.io/Birthdaybasho/"><img src="Screenshot 2025-12-30 205231.png"></a>
+      <div>
+        <h3>Disco PARTY!! :p</h3>
+        <p>Just a fun game I built for Hack Clubs YSWS program :) </p>
+      </div>
+    </div>
+    <div class="project">
+      <img src="20240505_162956.jpg">
+      <div>
+        <h3>In the Works ✨</h3>
+        <p> Coming veryy soon (perhaps)... :o</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Listen to some of my Favorite Songs! 🎧</h2>
+  <div class="card spotify">
+    <iframe src="https://open.spotify.com/embed/playlist/6gNDRak8pZMeiAhRxO1WcP"
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+  </div>
+</section>
+
+<section>
+  <h2>Lets work together! 🤙</h2>
+  <div class="card contact">
+    <p>I design websites & portfolios: <br> <strong>$5–$20 and free depending  on the scale *trying to build my portfolio!* </strong>
+    <br> <br> I'm also open to working on projects, joining startups, or helping with other creative endeavors!</p>
+    <button onclick="location.href='mailto:Opensite.co@gmail.com'">
+      Let’s work together! 💌
+    </button>
+  </div>
+</section>
+
+<footer>
+  Made with love ☀️ by Liz Leone
+</footer>
+
+</body>
+</html>
