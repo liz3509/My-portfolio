@@ -148,22 +148,16 @@ h2 {
   gap: 9px;
 }
 .about-grid p {
-  font-size: 1rem;
+  font-size: 1.4rem;
   line-height: 1.6;
+  font-family:cursive;
+  text-decoration: wavy;
   color: var(--text-soft);
-  
+  text-align: center;
 }
-.about-grid p1 {
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-soft);
-text-decoration: wavy underline;
-font-style: italic;
-  }
 .about-grid img {
   width: 100%;
   border-radius: 70px;
-  
 
   height: 100%;
   border-radius: 38%;
@@ -208,6 +202,13 @@ font-style: italic;
   width: 100%;
   height: 210px;
   object-fit: cover;
+}
+
+.project video {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
 }
 
 .project div {
@@ -290,9 +291,24 @@ footer {
 
 /* ========== RESPONSIVE ========== */
 @media (min-width: 700px) {
-  .about-grid { grid-template-columns: 1fr 1.3fr; }
+  .about-grid { grid-template-columns: 1fr 1.3fr; text-align: left; }
+  .about-grid p {
+    text-align: left;
+  }
   .projects { grid-template-columns: repeat(2,1fr); }
   .hobbies { grid-template-columns: repeat(3,1fr); }
+}
+
+/* Center the image on small screens for better mobile layout */
+@media (max-width: 699px) {
+  .about-grid {
+    text-align: center;
+  }
+  .about-grid img {
+    justify-self: center;
+    max-width: 280px;
+    padding: 3px;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -316,7 +332,7 @@ footer {
     <div class="hero-avatar">
       <img src="20240505_162429.jpg" alt="Liz">
     </div>
-    <h1>Welcome! I’m Liz Leone!✨</h1>
+    <h1>Welcome! I’m Liz Leon!✨</h1>
     <p>Web Dev and Designer ● AI app dev ● Hobbysist ● an extraterrestrial lol :p</p>
   </div>
 </header>
@@ -324,15 +340,13 @@ footer {
 <section>
   <h2>~ About Me ~ 🌱</h2>
   <div class="card about-grid">
-    <img src="IMG_0633 (1).jpg" alt="About Me">
+    <img src="1.png" style="border-color: #ffffff; stroke: #ffb8b8; stroke-width: 10%;" alt="About Me">
 
-     <p> greetings fellow traveler! 💫
+     <p> Greetings fellow traveler! 💫
 <br><br>
-      I enjoy making portfolios, AI apps, websites, games, and creating useful app ideas :p<br>
+      I enjoy making portfolios, AI apps, websites, games, and creating useful app ideas. :p<br>
       <br>
-    <br> I'm open to collaborating or scheduling a meeting to talk about potential opportunities, creative projects, or start up ideas!  
-    <br>
-    <br><br>Feel free to reach out! :) and I may be able to help you out for free depending on the scale of the project as I don't focus too much on profit!🚀
+    Feel free to reach out! :) I'm open to help build ideas, sites, projects etc. for free, as I don't focus too much on profit!🚀
   </p>
   </div>
 </section>
@@ -347,31 +361,31 @@ footer {
       </div>
     </div>
     <div class="project">
-      <img src="nature.jpg">
+      <img src="unnamed (1).jpg">
       <div>
         <h3>Naturee :p</h3>
-        <p>especially when its cold! :v (others might disagree) </p>
+        <p>Especially when its cold! :v (others might disagree) </p>
       </div>
     </div>
     <div class="project">
-      <img src="IMG_7704.jpg">
+      <img src="unnamed (2).jpg">
       <div>
         <h3>Cracking myself up lol ✨</h3>
-        <p> lots of random photos :p </p>
+        <p> Yes.. I carved a watermelon swan, I think?(Fun fact: I'm also vegan 🌱) </p>
       </div>
     </div>
   </div>
 </section>
 
 <section>
-  <h2>My Projects</h2>
+  <h2>~My Projects~</h2>
   <div class="projects">
     <div class="project">
-      <a href="https://opensite1.netlify.app/"><img src="Screenshot 2025-12-29 233643.png"></a>
+      <a href="https://open4all.netlify.app/"><video type="video/mp4" src="Untitled design.mp4" loop autoplay muted></a>
       <div>
         <h3>OpenSite.co</h3>
         <br>
-        <p>Rebeling against for profit AI companies<br><br> making AI apps opensourced <br> <br>*No subscriptions or downloads necessary!*</p>
+        <p>Rebeling against for profit companies<br><br> making apps/tools opensourced and accessible for the globe!🌏<br>*Inviting all devs to do ya thing and fill up the page!* <br> <br>*No subscriptions, ads, data collection, or downloads necessary!* </p>
       </div>
     </div>
     <div class="project">
@@ -400,18 +414,18 @@ footer {
 </section>
 
 <section>
-  <h2>Lets work together! 🤙</h2>
+  <h2>Contact my offices!📩</h2>
   <div class="card contact">
-    <p>I design websites & portfolios: <br> <strong>$5–$20 and free depending  on the scale *trying to build my portfolio!* </strong>
+    <p>I make websites, apps, games, and portfolios: <br> 
     <br> <br> I'm also open to working on projects, joining startups, or helping with other creative endeavors!</p>
     <button onclick="location.href='mailto:Opensite.co@gmail.com'">
-      Let’s work together! 💌
+      Let’s work together! 🤙
     </button>
   </div>
 </section>
 
 <footer>
-  Made with love ☀️ by Liz Leone
+  Made with care ☀️ by Liz Leon <br> Copyright © 2026 Open Site.co All rights reserved.
 </footer>
 
 </body>
