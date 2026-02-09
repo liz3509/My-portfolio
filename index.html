@@ -145,14 +145,14 @@ h2 {
 /* ========== ABOUT ========== */
 .about-grid {
   display: grid;
-  gap: 9px;
+  gap: 20px;
 }
 .about-grid p {
   font-size: 1.4rem;
   line-height: 1.6;
   font-family: 'Poppins', sans-serif;
   color: var(--text-soft);
-  text-align: center;
+  text-align: left;
 }
 .about-grid img {
   width: 100%;
@@ -298,15 +298,20 @@ footer {
   .hobbies { grid-template-columns: repeat(3,1fr); }
 }
 
-/* Center the image on small screens for better mobile layout */
+/* Responsive layout for mobile */
 @media (max-width: 699px) {
   .about-grid {
-    text-align: center;
+    grid-template-columns: 1fr 1.3fr;
+    text-align: left;
+    gap: 20px;
   }
   .about-grid img {
-    justify-self: center;
-    max-width: 180px;
+    max-width: 100%;
+    height: auto;
     padding: 3px;
+  }
+  .about-grid p {
+    text-align: left;
   }
 }
 
@@ -340,6 +345,7 @@ footer {
   <h2>~ About Me ~ 🌱</h2>
   <div class="card about-grid">
     <img src="1.png" style="border-color: #ffffff; stroke: #ffb8b8; stroke-width: 10%;" alt="About Me">
+<br>
 
      <p> Greetings fellow traveler! 💫
 <br><br>
@@ -380,7 +386,7 @@ footer {
   <h2>~My Projects~</h2>
   <div class="projects">
     <div class="project">
-      <a href="https://open4all.netlify.app/"><video type="video/mp4" src="Untitled design.mp4" loop autoplay muted></a>
+      <a href="https://open4all.netlify.app/"><video type="video/mp4" src="Untitled design.mp4" loop muted></a>
       <div>
         <h3>OpenSite.co</h3>
         <br>
